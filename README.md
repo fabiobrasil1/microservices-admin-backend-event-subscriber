@@ -19,7 +19,22 @@ npm install amqplib amqplib-connection-manager
 
 ```
 
-## Running the app
+## para a se comunicar com o banco de dados MongoDb
+
+```
+npm install @nestjs/mongoose mongoose
+
+```
+
+## Instalar dependências para uso do TypeScript em ambiente de desenvolvimento
+
+```
+npm install --save-dev @types/mongoose
+```
+
+
+
+## Rodando o app
 
 ```bash
 # development
@@ -32,7 +47,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Teste
 
 ```bash
 # unit tests
@@ -45,16 +60,4 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
