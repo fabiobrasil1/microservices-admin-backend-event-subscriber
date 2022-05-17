@@ -14,7 +14,7 @@ export class AppController {
 
     this.logger.log(`categoria: ${JSON.stringify(categoria)}`)
 
-    this.appService.criarCategoria(categoria)
+    await this.appService.criarCategoria(categoria)
   }
 
 }
