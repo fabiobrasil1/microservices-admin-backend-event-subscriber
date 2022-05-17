@@ -15,7 +15,7 @@ npm install @nestjs/microservices
 ## Para permitir a comunicação com RabitMQ
 
 ```
-npm install amqplib amqplib-connection-manager
+npm install amqplib amqp-connection-manager 
 
 ```
 
