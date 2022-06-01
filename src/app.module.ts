@@ -7,13 +7,20 @@ import { JogadorSchema } from './interfaces/jogadores/jogador.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://user:pass@clustermogo-79l5n.mongodb.net/<databasename>?retryWrites=true&w=majority',
-    {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false}),
     
-    MongooseModule.forFeature([
-      {name: 'Categoria', schema: CategoriaSchema},
-      {name: 'Jogador', schema: JogadorSchema},
-    ])
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRoot({
+      type: process.env.TYPEORM_CONNECTION,
+      host: process.env.TYPEORM_HOST,
+      port: process.env.TYPEORM_PORT,
+      username: process.env.TYPEORM_USERNAME,
+      password: process.env.TYPEORM_PASSWORD,
+      database: process.env.TYPEORM_DATABASE,
+      entities: [__dirname + '/**/*.entity{.js,.ts}'],
+
+      // Descomentar somente em ambiente de desenvolvimento
+      synchronize: true,
+    } as TypeOrmModuleOptions)
   ],
   controllers: [AppController],
   providers: [AppService],
