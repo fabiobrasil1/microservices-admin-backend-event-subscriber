@@ -11,7 +11,7 @@ async function bootstrap() {
       transport: Transport.RMQ,
       options: {
         // urls: ['amqp://<usuarioRabitMQ>:<passwordRabitMQ>@<ip_InstanciaRBTMQ_AWS>:<portaConexaoAplicaco>/<virtualhostname>']
-        url: ['amqp://user:password@18.210.17.173/smartrankink'],
+        url: ['amqp://admim:admim@localhost/smartrankink'],
         queue: 'admin-backend',
         logger:['log', 'error', 'warn', 'debug','verbose']
       },
