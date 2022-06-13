@@ -17,7 +17,6 @@ async function bootstrap() {
   await app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.RMQ,
     options: {
-      // urls: ['amqp://admin:admim@localhost/smartrankink'],
       urls: ['amqp://admin:admin@localhost:5672'],
       queue: 'admin-backend',
       // noAck: true,

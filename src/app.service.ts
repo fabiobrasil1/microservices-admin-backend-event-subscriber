@@ -8,7 +8,6 @@ import { Jogador } from './interfaces/jogadores/jogador.interface';
 @Injectable()
 export class AppService {
   constructor(
-    // @Inject('MATH_SERVICE') private client: ClientProxy
     // @InjectModel('Categoria') private readonly categoriaModel: Model<Categoria>,
     // @InjectModel('Jogador') private readonly jogadorModel: Model<Jogador>,
   ) { }

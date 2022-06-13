@@ -11,7 +11,7 @@ export class AppController {
 
   @EventPattern('criar-categoria')
   async criarCategoria(@Body() categoria: any) {
-    console.log(categoria)
+    // console.log(categoria)
     let log = this.logger.log(`categoria: ${JSON.stringify(categoria)}`)
     console.log(log)
     return categoria
@@ -23,12 +23,14 @@ export class AppController {
   @MessagePattern('consultar-categorias' )
   async consultarCategorias(@Payload() data: any): Promise<any> {
 
-    this.logger.log(JSON.stringify(data))
-
+    // data = this.logger.log(JSON.stringify(data))
+if(data){
+  console.log(data)
+  return await data
+}
  
     // await this.appService.criarCategoria(data)
-    console.log(data)
-    return data
+    // console.log(data)
     // if(_id){
     //   return this.appService.consultarCategoriaPeloId(_id)
     // }else{
